@@ -57,13 +57,16 @@ int1 : int = 2
 int2 : int = 5
 underscored : int = 14_000_000_000
 
-float1 : float = 6.0
+float1 : float = 7.0
 float2 : float = 3.0
 
 addition = int1 + int2
 subtract =  int2 - int1
 multiply = int1 * float2
 division = float1 / float2
+
+# Double forward slash: Result will be rounded down to closet integer.
+division2 = float1 // float2
 squared = float1 ** int1
 
 # Multiple Assignment
@@ -77,8 +80,3 @@ print(x, y, z)
 # should be treated as a constant and never be changed.
 
 SAMPLE_CONSTANT = 400000
-
-
-
-
-
