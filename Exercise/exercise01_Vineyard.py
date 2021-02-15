@@ -1,4 +1,5 @@
 # Exercise01_Vineyard
+# Calculate available spaces for GrapeVines.
 # Used Formula: V = (R-2E)/S
 # V: number of grapevines, R: length of the row in feet, E: amount of space in feet, used by an end point assembly
 # S: space between vines, in feet.

@@ -1,4 +1,5 @@
 # 48 cookies:
+# Calculates total number of cookies can be made based on ingredients for 48 cookies.
 # 1.5 coups of sugar, 1 cup of butter, 2.75 cups of flour.
 
 amountOfCookies = int(input("How many cookies do you want to make? "))
