@@ -10,17 +10,19 @@ pocketColor : str
 
 if targetPocket == 0 :
     pocketColor = "green"
+    print(f"  Pocket {targetPocket} is {pocketColor}.")
 elif 1 <= targetPocket <= 10 or 19 <= targetPocket <= 28:
     if targetPocket % 2 == 0 :
         pocketColor = "black"
     else :
         pocketColor = "red"
+    print(f"  Pocket {targetPocket} is {pocketColor}.")
 elif 11 <= targetPocket <= 18 or 29 <= targetPocket <= 36 :
     if targetPocket % 2 == 0:
         pocketColor = "red"
     else:
         pocketColor = "black"
+    print(f"  Pocket {targetPocket} is {pocketColor}.")
 else :
     pocketColor = "Invalid Input!"
-
-print(f"  Pocket {targetPocket} is {pocketColor}.")
+    print(f"  Invalid Input!")

@@ -29,7 +29,7 @@ if 0 <= orderQuantity :
         finalPrice = orderQuantity * PRICE
 
     finalPrice = "{:0,.2f}".format(finalPrice)
-    print(f"{discountRate} discount applied")
-    print(f"The final price for purchasing {orderQuantity} packages is ${finalPrice}.")
+    print(f"  {discountRate} discount applied")
+    print(f"  The final price for purchasing {orderQuantity} packages is ${finalPrice}.")
 else :
-    print(f"Invalid Input!")
+    print(f"  Invalid Input!")

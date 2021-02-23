@@ -9,10 +9,10 @@
 
 velocity = float(input("Enter the velocity of water in the pipe: "))
 diameter = float(input("Enter the pipe's diameter: "))
-temp = int(input(f"Enter the temperature in \u00B0C as 5, 10, or 15: "))
+temp = float(input(f"Enter the temperature in \u00B0C as 5, 10, or 15: "))
 kv : float
 
-if temp == 5 :
+if temp == 5:
     kv = 1.49 * (10 ** -6)
 elif temp == 10 :
     kv = 1.31 * (10 ** -6)
@@ -22,4 +22,4 @@ elif temp == 15 :
 re = (velocity * diameter) / kv
 re_formatting = "{:.2e}".format(re)
 
-print(f"The Reynolds number for flow at {velocity} m/s in a {diameter} m diameter pipe at {temp}\u00BC is {re_formatting}.")
+print(f"The Reynolds number for flow at {velocity} m/s in a {diameter} m diameter pipe at {temp}\u00B0C is {re_formatting}.")
