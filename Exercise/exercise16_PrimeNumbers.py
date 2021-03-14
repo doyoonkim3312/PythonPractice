@@ -12,7 +12,7 @@
 def is_prime(num: int):
     if num == 1:
         return False
-    for index in range(2, num):
+    for index in range(2, int(num ** 0.5) + 1):
         if num % index == 0:
             return False
     return True
