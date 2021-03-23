@@ -9,30 +9,23 @@ import random as random
 def main():
     # Write your mainline logic here ------------------------------------------
     while True:
-        choices = ["rock", "scissors", "paper"]
-        computerChoice: str = random.choice(choices)
+        computerChoice: str = get_computer_choice()
 
-        while True:
-            userChoice: str = input("Choose rock, paper, or scissors: ")
+        userChoice: str = get_player_choice()
 
-            if (userChoice == "rock" or userChoice == "paper" or userChoice == "scissors"):
-                break
-            else:
-                print("You made an invalid choice. Please try again.")
-                continue
-
-        print(f"  The computer chose {computerChoice}, and you chose {userChoice}")
+        print(f"  The computer chose {computerChoice}, and you chose {userChoice}.")
         gameResult: str = get_winner(computerChoice, userChoice)
 
         if gameResult == "tie":
-            print(f"\nIts a {gameResult}. Starting over")
+            print(f"  Its a {gameResult}. Starting over.\n")
             continue
         else:
-            print(f"  {computerChoice} beats {userChoice}")
             if gameResult == "computer":
-                print(f"You lost. Better luck next time")
+                print(f"  {computerChoice} beats {userChoice}")
+                print(f"  You lost.  Better luck next time.")
             else:
-                print(f"You won the game!")
+                print(f"  {userChoice} beats {computerChoice}")
+                print(f"  You won the game!")
             print("Thanks for playing.")
             break
 
@@ -60,6 +53,21 @@ def get_winner(computerChoice: str, userChoice: str):
         else:
             return "tie"
 
+
+def get_computer_choice():
+    choices = ["rock", "scissors", "paper"]
+    return random.choice(choices)
+
+
+def get_player_choice():
+    while True:
+        userChoice: str = input("Choose rock, paper, or scissors: ")
+
+        if (userChoice == "rock" or userChoice == "paper" or userChoice == "scissors"):
+            return userChoice
+        else:
+            print("You made an invalid choice. Please try again.")
+            continue
 
 
 # Don't change this -----------------------------------------------------------
