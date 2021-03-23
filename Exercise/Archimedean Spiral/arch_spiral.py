@@ -1,7 +1,7 @@
 ###############################################################################
 # Author: Doyoon Kim (kim3312@purdue.edu)
 # Date: Mar 20, 2021
-# Description This program draws Archimedes Spirals using turtle module
+# Description This program draws Archimedes Spirals using turtle module.
 ###############################################################################
 
 from turtle import *
@@ -14,18 +14,14 @@ def main():
     speed(10)
     # -------------------------------------------------------------------------
 
-    xComprehensive = 0
-    yComprehensive = 0
-
-    rotation = 7
-
-    for degree in range(2250):
+    #Formulas given in manual are used. Degree increasement scale is 0.58
+    degree = 0
+    while degree < 2160:
         radian = degree * (pi / 180)
-        xPosition = (radian / 10) * cos(radian)
-        xComprehensive = xComprehensive + xPosition
-        yPosition = (radian / 10) * sin(radian)
-        yComprehensive = yComprehensive + yPosition
-        goto(xComprehensive + xPosition, yComprehensive + yPosition)
+        xPosition = (degree / 10) * cos(radian)
+        yPosition = (degree / 10) * sin(radian)
+        goto(xPosition, yPosition)
+        degree = degree + 0.58
 
 
     # Write your mainline logic here ------------------------------------------
