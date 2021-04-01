@@ -5,11 +5,14 @@
 # calculates lowest value, highest value, total sum, and average value.
 ################################################################################
 
+# get_number_list: This function takes 10 integer from user and returns list of input numbers.
+# This function has a validation check as well.
 def get_number_list():
     outputList: list = list()
     for index in range(10):
         while True:
-            number = input(f"  Enter number {index + 1} of 10: ")
+            indexFormatted = "{:>2}".format(index + 1)
+            number = input(f"  Enter number {indexFormatted} of 10: ")
             try:
                 number = float(number)
                 break
@@ -34,8 +37,8 @@ def main():
 
     average = total / len(targetList)
 
-    print(f"Lowest Number: {lowest:.2f}")
-    print(f"Highest Number: {highest:.2f}")
+    print(f"Lowest number: {lowest:.2f}")
+    print(f"Highest number: {highest:.2f}")
     print(f"Total: {total:.2f}")
     print(f"Average: {average:.2f}")
 

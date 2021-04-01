@@ -5,6 +5,8 @@
 # contains all the elements from first list that is multiples of 7
 ################################################################################
 
+# multiples_of: this function takes number and list of number and get numbers from numberList, which are multiples of
+# number.
 def multiples_of(number, numberList: list):
     outputList: list = list()
     for element in numberList:
