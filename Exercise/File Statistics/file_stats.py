@@ -8,11 +8,15 @@
 def main():
     inputFile = open('rumpelstiltskin.txt', 'r')
     contents = inputFile.read()
+    inputFile.close()
     lineCount, wordCount = 0, 0
 
     for line in contents.split("\n"):
         lineCount = lineCount + 1
-        wordCount = wordCount + len(line.split(" "))
+        if len(line) != 0:
+            wordCount = wordCount + len(line.split())
+    # The line below deletes empty line added by editor.
+    lineCount = lineCount - 1
 
     print(f"Total number of words: {wordCount}")
     print(f"Total number of lines: {lineCount}")

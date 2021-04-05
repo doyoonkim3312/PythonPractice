@@ -22,6 +22,7 @@ def main():
         else:
             outputFile.write(str(random.randint(1, 500)) + "\n")
 
+    outputFile.close()
 
 
 

@@ -4,16 +4,17 @@
 # Description: This program takes string and returns Pig Latin
 ################################################################################
 
-def pig_lain(input: str):
+# pig_latin: This function performs conversion of plaintext and Pig Latin.
+def pig(input: str):
     FirstLetter: str = ""
     pigLainConverted: str = ""
     OutputString: list = list()
     for element in input.split():
         for index in range(len(element)):
             if index == 0:
-                FirstLetter = element[index]
+                FirstLetter = element[index].lower()
             else:
-                pigLainConverted = pigLainConverted + element[index]
+                pigLainConverted = pigLainConverted + element[index].lower()
         OutputString.append(pigLainConverted + FirstLetter + "ay")
         pigLainConverted = ""
     OutputString[0] = OutputString[0].capitalize()
@@ -23,7 +24,7 @@ def pig_lain(input: str):
 
 def main():
     inputString = input("Enter a string: ")
-    print(pig_lain(inputString))
+    print(pig(inputString))
 
 
 if __name__ == '__main__':

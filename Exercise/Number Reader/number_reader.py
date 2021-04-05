@@ -6,17 +6,17 @@
 ################################################################################
 
 def main():
-    try:
-        inputFile = open('../Number Writer/random_numbers.txt', 'r')
-        numbers = inputFile.read()
-    except OSError:
-        print("Error: Unable to read file. Program cannot locate the file.")
-        exit()
+    inputFile = open('random_numbers.txt', 'r')
+    numbers = inputFile.read()
+    inputFile.close()
 
     maxNumber, minNumber, totalNumbers, sum = 0, 0, 0, 0
     for number in numbers.split("\n"):
-        totalNumbers = totalNumbers + 1
-        sum = sum + int(number)
+        try:
+            sum = sum + int(number)
+            totalNumbers = totalNumbers + 1
+        except ValueError:
+            break
 
         if totalNumbers == 1:
             maxNumber, minNumber = int(number), int(number)
