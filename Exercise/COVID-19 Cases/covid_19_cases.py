@@ -40,7 +40,7 @@ def main():
     fig, chart = plt.subplots()
     chart.set_title("Positive COVID-19 Cases in Indiana")
     chart.set_xlabel("Date")
-    chart.set_ylabel("Number of Cases (In thousands)")
+    chart.set_ylabel("Number of Cases (in thousands)")
 
     chart.bar(dates, casesCumulative)
     fig.autofmt_xdate()

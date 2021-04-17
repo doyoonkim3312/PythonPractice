@@ -33,11 +33,11 @@ def main():
     fig, chart = plt.subplots()
     chart.set_title("2008 Weekly Gas Prices")
     chart.set_xlabel("Weeks (by number)")
-    chart.set_ylabel("Average Price (dollars/gallon")
+    chart.set_ylabel("Average Price (dollars/gallon)")
 
     chart.plot(weeks, salesValues)
     chart.set_xlim(1, 52)
-    chart.set_ylim(1.5, 4.3)
+    chart.set_ylim(1.5, 4.25)
     chart.grid()
 
     plt.savefig("gas_prices.pdf")
